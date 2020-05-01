@@ -2,12 +2,12 @@ FROM node:alpine as builder
 
 
 WORKDIR '/app'
-COPY package.json ./
+COPY package*.json ./
 
 #Install some dependencies 
-COPY ./ ./ 
-RUN  npm install
 COPY  . . 
+RUN  npm install
+
 
 
 #Default command
